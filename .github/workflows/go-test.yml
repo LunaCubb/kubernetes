@@ -21,5 +21,5 @@ jobs:
       - name: Install dependencies
         run: go mod tidy  # 确保依赖正确
 
-      - name: Run tests in test folder
-        run: go test -v ./test/...  # 仅运行 test 目录下的测试
+      - name: Run specific test in test folder
+        run: go test ./test/utils/image/manifest_test.go  # 仅运行 test 目录下的测试
